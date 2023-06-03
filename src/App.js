@@ -35,8 +35,22 @@ function App() {
         type: 'success'
       });
     }
+  };
 
-  }
+  const removeItem = (id) => {
+    console.log('delete ', id);
+    const result = list.filter((item) => item.id !== id)
+    setList(result);
+    setAlert({
+      show: true,
+      msg: 'ลบข้อมูลสำเร็จ',
+      type: 'error',
+    })
+  };
+
+  const editItem = (id) => {
+    console.log('edit ', id);
+  };
 
   return (
     <div className="container">
@@ -52,7 +66,7 @@ function App() {
       </form>
       <div className='list-container'>
         {list && list.map((item, index) => (
-          <List key={index} item={item} />
+          <List key={index} item={item} removeItem={removeItem} editItem={editItem} />
         ))}
 
       </div>

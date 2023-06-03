@@ -42,7 +42,7 @@ input:focus {
 
 button {
   /* margin-left: 8px; */
-  background: #dfe1e2;
+  background: #74db6b;
   padding: 8px;
   font-weight: 800;
   border-radius: 0px 8px 8px 0px;
@@ -72,11 +72,17 @@ button:hover {
 
 .btn-item {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  grid-gap: 1rem;
+  cursor: pointer;
+  /* justify-content: space-between;
   width: 6vw;
-  /* background: #9fcf9d; */
-  font-size: 1.2rem;
+  font-size: 1.2rem; */
 }
+
+/* .btn-item:hover {
+  transform: scale(1.08);
+} */
 
 .alert {
   margin-bottom: 1.5rem;
